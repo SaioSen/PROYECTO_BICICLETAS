@@ -12,6 +12,16 @@ a {
   color: #0366d6;
 }
 
+.back {
+  background-color:#384656;
+  color: #fff;
+}
+
+.back2 {
+  background-color:#CE8631;
+  color: #fff;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
