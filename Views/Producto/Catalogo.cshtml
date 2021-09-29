@@ -5,27 +5,26 @@
 }
 <h1 style="text-align:center;">Catalogo de Productos</h1>
 
-<table class="table table-hover" style="text-align: center;">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
-      <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
-      <th scope="col">@Html.DisplayNameFor(model => model.Price)</th>
-      <th scope="col">@Html.DisplayNameFor(model => model.Amout)</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="container">
+  <div class="row">
+    @foreach (var item in Model)
+   { 
+    <div class="col-sm">
+         
+       <img src="@item.Image" alt="" width="300px" height="300px">
+       <p class="text-center"> @Html.DisplayFor(modelItem => item.Name) </p> 
+       <p class="text-center">S/.@Html.DisplayFor(modelItem => item.Price)</p> 
+       <p class="text-center"> Stock:.@Html.DisplayFor(modelItem => item.Amout)</p> 
+    
+    </div>
+   
+    }
+ 
+</div>
 
-   @foreach (var item in Model)
-   {
+    
+  
+  
 
-    <tr>
-      <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th> 
-      <td> <img src="@item.Image" alt="" width="400px" height="400px"></td>
-      <td>S/.@Html.DisplayFor(modelItem => item.Price)</td>
-      <td>S/.@Html.DisplayFor(modelItem => item.Amout)</td>
-    </tr>
-
-   }
-  </tbody>
-</table>
+  
+ 
