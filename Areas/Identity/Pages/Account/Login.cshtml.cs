@@ -50,7 +50,11 @@ namespace PROYECTO_BICICLETAS.Areas.Identity.Pages.Account
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
+<<<<<<< HEAD
             [Display(Name = "Recordarme")]
+=======
+            [Display(Name = "¿Recordar contraseña?")]
+>>>>>>> 1bcf4a7d058b7e7f9c627a8acb0931243ea31d66
             public bool RememberMe { get; set; }
         }
 

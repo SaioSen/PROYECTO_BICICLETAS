@@ -1,13 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+
+<head class="">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PROYECTO_BICICLETAS</title>
+    <title>@ViewData["Title"] - ZONABICI</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     
 </head>
+<<<<<<< HEAD
 <body class="back">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -15,21 +17,35 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PROYECTO_BICICLETAS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
+=======
+
+<body >
+    <header class=" back2">
+        <nav class="  navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3 ">
+            <div class="container ">
+                <a class="navbar-brand" href><img
+                src="https://static.vecteezy.com/system/resources/previews/001/192/394/non_2x/olympic-bike-race-png.png"
+                alt="" width="80" height="80"></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> ZONABICI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+>>>>>>> 1bcf4a7d058b7e7f9c627a8acb0931243ea31d66
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area=""><strong>Catálogo</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" >Catálogo</a>
+                            <a class="nav-link text-dark" asp-area=""> <strong>Contacto</strong> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" >Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs"> <strong>About
+                                Us</strong></a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -45,7 +61,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - PROYECTO_BICICLETAS - <a asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+            Copyright © ZONA BICI-LIMA,PERÚ <a asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -53,4 +69,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

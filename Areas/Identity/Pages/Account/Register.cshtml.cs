@@ -58,7 +58,11 @@ namespace PROYECTO_BICICLETAS.Areas.Identity.Pages.Account
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirmar contraseña")]
+<<<<<<< HEAD
             [Compare("Password", ErrorMessage = "La contraseña y confirmación no concuerdan")]
+=======
+            [Compare("Password", ErrorMessage = "Las contraseñas no coinciden")]
+>>>>>>> 1bcf4a7d058b7e7f9c627a8acb0931243ea31d66
             public string ConfirmPassword { get; set; }
         }
 
