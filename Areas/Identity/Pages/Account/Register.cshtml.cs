@@ -53,16 +53,12 @@ namespace PROYECTO_BICICLETAS.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Contraseña")]
+            [Display(Name = "Password")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirmar contraseña")]
-<<<<<<< HEAD
-            [Compare("Password", ErrorMessage = "La contraseña y confirmación no concuerdan")]
-=======
-            [Compare("Password", ErrorMessage = "Las contraseñas no coinciden")]
->>>>>>> 1bcf4a7d058b7e7f9c627a8acb0931243ea31d66
+            [Display(Name = "Confirm password")]
+            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
 
