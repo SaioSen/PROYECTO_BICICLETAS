@@ -12,5 +12,7 @@ namespace PROYECTO_BICICLETAS.Data
             : base(options)
         {
         }
+        public DbSet<PROYECTO_BICICLETAS.Models.Producto> Productos {get;set;}
+
     }
 }
