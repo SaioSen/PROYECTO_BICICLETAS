@@ -1,0 +1,62 @@
+@model PROYECTO_BICICLETAS.Models.Producto
+
+@{
+    ViewData["Title"] = "Registro de Bicicletas";
+}
+ <h1 style="text-align: center;">Formulario de registro de Bicicletas</h1>
+
+<div class="container col-md-5">
+    
+  <form asp-controller="Producto" asp-action="Registrar">
+
+      <div class="form-group">
+         <label asp-for="Name" class="control-label"></label>
+         <input asp-for="Name" class="form-control"> 
+         <span asp-validation-for="Name" class="text-danger"></span> 
+     </div> 
+
+      <div class="form-group">
+         <label asp-for="Image" class="control-label"></label>
+         <input asp-for="Image" class="form-control"> 
+          <span asp-validation-for="Image" class="text-danger"></span> 
+     </div> 
+
+      <div class="form-group">
+         <label asp-for="Price" class="control-label"></label>
+         <input asp-for="Price" class="form-control" >
+         <span asp-validation-for="Price" class="text-danger"></span>  
+     </div> 
+
+     <div class="form-group">
+         <label asp-for="Amout" class="control-label"></label>
+         <input asp-for="Amout" class="form-control" >
+         <span asp-validation-for="Amout" class="text-danger"></span>  
+     </div> 
+
+     <div class="form-group">
+         <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+         <span asp-validation-for="Descripcion" class="text-danger"></span>  
+     </div> 
+
+     <div class="form-group">
+        <label asp-for="Categoria" class="control-label"></label>
+        <select asp-for="Categoria">
+            <option value="urbanas">Urbanas</option>
+            <option value="BMX">Free Style/BMX</option>
+            <option value="ruteras">Ruteras</option>
+            <option value="electrica">Eléctrica</option>
+            <option value="infantil">Infantil</option>
+        </select>
+     </div> 
+
+
+
+     <br>
+     <div style="text-align:center;" >
+         <button type="submit" class="btn btn-primary">Registrar</button>
+     </div>
+
+  </form>
+
+</div>
