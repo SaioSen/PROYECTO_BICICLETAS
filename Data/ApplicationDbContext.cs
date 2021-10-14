@@ -14,5 +14,9 @@ namespace PROYECTO_BICICLETAS.Data
         }
         public DbSet<PROYECTO_BICICLETAS.Models.Producto> Productos {get;set;}
 
+        public DbSet<PROYECTO_BICICLETAS.Models.Accesorio> Accesorios {get;set;}
+
+        public DbSet<PROYECTO_BICICLETAS.Models.Indumentaria> Indumentarias {get;set;}
+
     }
 }

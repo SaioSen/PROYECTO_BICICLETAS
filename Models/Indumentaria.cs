@@ -1,14 +1,12 @@
-   
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace PROYECTO_BICICLETAS.Models
 {
-    [Table("t_producto")]
-    public class Producto
-    { 
-    
+    [Table("t_indumentaria")]
+    public class Indumentaria
+    {
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int Id { get; set;}
@@ -42,7 +40,7 @@ namespace PROYECTO_BICICLETAS.Models
         [Display (Name="Categoria")]  
         [Column("categoria")]
         public string Categoria { get; set; }
-        
 
+        
     }
 }

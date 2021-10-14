@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PROYECTO_BICICLETAS.Data;
@@ -9,9 +10,10 @@ using PROYECTO_BICICLETAS.Data;
 namespace PROYECTO_BICICLETAS.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211014194128_agregacion_accesorios")]
+    partial class agregacion_accesorios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,8 +227,8 @@ namespace PROYECTO_BICICLETAS.Data.Migrations
                         .HasColumnName("id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("Amout")
-                        .HasColumnType("integer")
+                    b.Property<decimal>("Amout")
+                        .HasColumnType("numeric")
                         .HasColumnName("amout");
 
                     b.Property<string>("Descripcion")
@@ -253,47 +255,6 @@ namespace PROYECTO_BICICLETAS.Data.Migrations
                     b.ToTable("t_accesorio");
                 });
 
-            modelBuilder.Entity("PROYECTO_BICICLETAS.Models.Indumentaria", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<int>("Amout")
-                        .HasColumnType("integer")
-                        .HasColumnName("amout");
-
-                    b.Property<string>("Categoria")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("categoria");
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("description");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("image");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("name");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric")
-                        .HasColumnName("price");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_indumentaria");
-                });
-
             modelBuilder.Entity("PROYECTO_BICICLETAS.Models.Producto", b =>
                 {
                     b.Property<int>("Id")
@@ -302,8 +263,8 @@ namespace PROYECTO_BICICLETAS.Data.Migrations
                         .HasColumnName("id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("Amout")
-                        .HasColumnType("integer")
+                    b.Property<decimal>("Amout")
+                        .HasColumnType("numeric")
                         .HasColumnName("amout");
 
                     b.Property<string>("Categoria")

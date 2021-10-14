@@ -1,9 +1,9 @@
-@model IEnumerable<PROYECTO_BICICLETAS.Models.Producto>
+@model IEnumerable<PROYECTO_BICICLETAS.Models.Accesorio>
 
 @{
-    ViewData["Title"] = "Catalogo de Bicicletas";
+    ViewData["Title"] = "Catalogo de Accesorios";
 }
-<h1 style="text-align:center;">Catalogo de Bicicletas</h1>
+<h1 style="text-align:center;">Catalogo de Accesorios</h1>
 
 <div class="container">
   <div class="row">
@@ -20,8 +20,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                                    <p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
-                                    <p class="card-text">@Html.DisplayFor(modelItem => item.Categoria)</p>
+                                    <p class="card-text"> Precio:.@Html.DisplayFor(modelItem => item.Price)</p>
                                     <p class="card-text"> Stock:.@Html.DisplayFor(modelItem => item.Amout)</p> 
                                     <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
                                     <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
@@ -35,8 +34,3 @@
 </div>
 
     
-  
-  
-
-  
- 
