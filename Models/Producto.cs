@@ -33,5 +33,17 @@ namespace PROYECTO_BICICLETAS.Models
         [Column("amout")]
         public Decimal Amout { get; set; }
 
+        [Required(ErrorMessage="Debe colocar la descripcion")]
+        [Display (Name="Descripcion")]  
+        [Column("description")]
+        public string Descripcion { get; set; }
+
+        [Required(ErrorMessage="Debe colocar la categoria")]
+        [Display (Name="Categoria")]  
+        [Column("categoria")]
+        public string Categoria { get; set; }
+
+        
+
     }
 }
