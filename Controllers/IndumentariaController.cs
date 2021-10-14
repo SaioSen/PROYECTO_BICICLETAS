@@ -11,90 +11,87 @@ using PROYECTO_BICICLETAS.Data;
 
 namespace PROYECTO_BICICLETAS.Controllers
 {
-    public class ProductoController : Controller{
-        
+
+    public class IndumentariaController : Controller{
+
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
 
-
-        public ProductoController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public IndumentariaController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
             _context = context;
         }
 
-        public IActionResult Index()
+         public IActionResult Index()
         {
             //listar
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
-            //listar
-        
-        }
-        public IActionResult Catalogo()
-        {
-            //listar
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
+            var listarIndumentaria = _context.Indumentarias.ToList();
+            return View(listarIndumentaria);
             //listar
         
         }
 
+        public IActionResult Catalogo3()
+        {
+            //listar
+            var listarIndumentaria = _context.Indumentarias.ToList();
+            return View(listarIndumentaria);
+            //listar
+        
+        }
 
         public IActionResult Registro()
         {
             return View();
         }
 
-        
         [HttpPost]
-        public IActionResult Registrar (Producto objProducto){
+        public IActionResult Registrar (Indumentaria objIndumentaria){
 
            if(ModelState.IsValid){
 
                 //Registrar
-               _context.Add(objProducto);
+               _context.Add(objIndumentaria);
                _context.SaveChanges();
                 //Registrar
                 return RedirectToAction(nameof(Index));   
              }
          
-         return View ("Registro",objProducto);
+         return View ("Registro",objIndumentaria);
 
         }
 
-        //editar
-        public async Task<IActionResult> Editar (int ? id){
+         public async Task<IActionResult> Editar (int ? id){
         
             if(id == null){
             return NotFound();
             }else{
                 
-                var producto= await _context.Productos.FindAsync(id);
-                if(producto == null){
+                var indumentaria= await _context.Indumentarias.FindAsync(id);
+                if(indumentaria == null){
                     return NotFound();
                 }
                 else{
-                    return View(producto);
+                    return View(indumentaria);
                 }
 
             }
 
         }
 
-       
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Descripcion,Categoria")] Producto objProducto ){
+        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Categoria,Descripcion")] Indumentaria objIndumentaria ){
 
-            if(id !=objProducto.Id){
+            if(id !=objIndumentaria.Id){
                 return NotFound();
             }
 
             if(ModelState.IsValid){
             try{
-                _context.Update(objProducto);
+                _context.Update(objIndumentaria);
                 await _context.SaveChangesAsync();
                 
             }
@@ -105,24 +102,36 @@ namespace PROYECTO_BICICLETAS.Controllers
             return RedirectToAction(nameof(Index));
             }
 
-            return View (objProducto);
+            return View (objIndumentaria);
 
         }
-        //editar
 
-         
-        //eliminar
-        public IActionResult Eliminar (int? id){
+         public IActionResult Eliminar (int? id){
 
-                var producto= _context.Productos.Find(id);
-                _context.Productos.Remove(producto);
+                var indumentaria= _context.Indumentarias.Find(id);
+                _context.Indumentarias.Remove(indumentaria);
                 _context.SaveChanges();
 
                 return RedirectToAction(nameof(Index));
 
          }
-        
-   
-    
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
 }

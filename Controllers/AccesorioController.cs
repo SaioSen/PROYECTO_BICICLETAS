@@ -11,90 +11,86 @@ using PROYECTO_BICICLETAS.Data;
 
 namespace PROYECTO_BICICLETAS.Controllers
 {
-    public class ProductoController : Controller{
-        
+    public class AccesorioController : Controller{
+
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
-
-
-        public ProductoController(ILogger<HomeController> logger, ApplicationDbContext context)
+    
+      public AccesorioController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
             _context = context;
         }
 
-        public IActionResult Index()
+         public IActionResult Index()
         {
             //listar
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
-            //listar
-        
-        }
-        public IActionResult Catalogo()
-        {
-            //listar
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
+            var listarAccesorios = _context.Accesorios.ToList();
+            return View(listarAccesorios);
             //listar
         
         }
 
+        public IActionResult Catalogo2()
+        {
+            //listar
+            var listarAccesorios = _context.Accesorios.ToList();
+            return View(listarAccesorios);
+            //listar
+        
+        }
 
         public IActionResult Registro()
         {
             return View();
         }
 
-        
         [HttpPost]
-        public IActionResult Registrar (Producto objProducto){
+        public IActionResult Registrar (Accesorio objAccesorio){
 
            if(ModelState.IsValid){
 
                 //Registrar
-               _context.Add(objProducto);
+               _context.Add(objAccesorio);
                _context.SaveChanges();
                 //Registrar
                 return RedirectToAction(nameof(Index));   
              }
          
-         return View ("Registro",objProducto);
+         return View ("Registro",objAccesorio);
 
         }
 
-        //editar
-        public async Task<IActionResult> Editar (int ? id){
+         public async Task<IActionResult> Editar (int ? id){
         
             if(id == null){
             return NotFound();
             }else{
                 
-                var producto= await _context.Productos.FindAsync(id);
-                if(producto == null){
+                var accesorio= await _context.Accesorios.FindAsync(id);
+                if(accesorio == null){
                     return NotFound();
                 }
                 else{
-                    return View(producto);
+                    return View(accesorio);
                 }
 
             }
 
         }
 
-       
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Descripcion,Categoria")] Producto objProducto ){
+        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Descripcion")] Accesorio objAccesorio ){
 
-            if(id !=objProducto.Id){
+            if(id !=objAccesorio.Id){
                 return NotFound();
             }
 
             if(ModelState.IsValid){
             try{
-                _context.Update(objProducto);
+                _context.Update(objAccesorio);
                 await _context.SaveChangesAsync();
                 
             }
@@ -105,24 +101,30 @@ namespace PROYECTO_BICICLETAS.Controllers
             return RedirectToAction(nameof(Index));
             }
 
-            return View (objProducto);
+            return View (objAccesorio);
 
         }
-        //editar
 
-         
-        //eliminar
-        public IActionResult Eliminar (int? id){
+         public IActionResult Eliminar (int? id){
 
-                var producto= _context.Productos.Find(id);
-                _context.Productos.Remove(producto);
+                var accesorio= _context.Accesorios.Find(id);
+                _context.Accesorios.Remove(accesorio);
                 _context.SaveChanges();
 
                 return RedirectToAction(nameof(Index));
 
          }
-        
-   
-    
+
+
+
+
+
+
+
+
+
+
+
     }
+
 }

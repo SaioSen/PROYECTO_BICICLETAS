@@ -1,15 +1,14 @@
-   
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace PROYECTO_BICICLETAS.Models
 {
-    [Table("t_producto")]
-    public class Producto
-    { 
-    
+    [Table("t_accesorio")]
+    public class Accesorio
+    {
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         [Column("id")]
         public int Id { get; set;}
 
@@ -37,12 +36,6 @@ namespace PROYECTO_BICICLETAS.Models
         [Display (Name="Descripcion")]  
         [Column("description")]
         public string Descripcion { get; set; }
-
-        [Required(ErrorMessage="Debe colocar la categoria")]
-        [Display (Name="Categoria")]  
-        [Column("categoria")]
-        public string Categoria { get; set; }
-        
 
     }
 }
