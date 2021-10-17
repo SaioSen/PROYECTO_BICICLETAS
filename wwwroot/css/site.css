@@ -69,13 +69,63 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /* nuevo */
+  margin: 0em auto 0em;
 }
-.footer {
-  position: absolute;
+
+
+
+footer{
+  position: relative;
   bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  left: 0;
+  right: 0;
+  background: #0a0a0a;
+  align-items: center;
+  height: auto;
+  width: 100vw;
+  font-family:"Open Sans";
+  padding-top: 40px;
+  color: #FFFFFF;
+} 
+
+.footer-content{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h4{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.redes{
+  list-style: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.redes li{
+  margin: 0 10 px;  
+}
+.redes a{
+  text-decoration:none ;
+  color: #FFFFFF;
+}
+.redes a i{
+  font-size: 3.1rem;
+  transition: color .4s ease;
+}
+.redes  a:hover  i{
+  color:#F8C817;
+}
+
+.b{
+  
+  margin:50px ;
 }
