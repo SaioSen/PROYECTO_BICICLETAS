@@ -103,3 +103,29 @@ footer{
   line-height: 3rem;
 }
 
+.redes{
+  list-style: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.redes li{
+  margin: 0 10 px;  
+}
+.redes a{
+  text-decoration:none ;
+  color: #FFFFFF;
+}
+.redes a i{
+  font-size: 3.1rem;
+  transition: color .4s ease;
+}
+.redes  a:hover  i{
+  color:#F8C817;
+}
+
+.b{
+  
+  margin:50px ;
+}
