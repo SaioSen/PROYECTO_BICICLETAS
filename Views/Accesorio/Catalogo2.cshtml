@@ -5,6 +5,15 @@
 }
 <h1 style="text-align:center;">Catalogo de Accesorios</h1>
 
+<br>
+<nav aria-label="breadcrumb">
+  <ol class="nav">
+    <li class="breadcrumb-item"><a href="/Home/Index">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Catalogo</li>
+  </ol>
+</nav>
+<br>
+
 <div class="container">
   <div class="row">
     @foreach (var item in Model)
@@ -22,8 +31,8 @@
                                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                                     <p class="card-text"> Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
                                     <p class="card-text"> Stock: @Html.DisplayFor(modelItem => item.Amout)</p> 
-                                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
-                                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
+                                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
+                                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalle</a>
                                 </div>
                             </div>
                         </div>

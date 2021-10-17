@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using PROYECTO_BICICLETAS.Models;
 using Microsoft.EntityFrameworkCore;
 using PROYECTO_BICICLETAS.Data;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace PROYECTO_BICICLETAS.Controllers
 {
@@ -15,12 +17,14 @@ namespace PROYECTO_BICICLETAS.Controllers
         
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
 
-        public ProductoController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public ProductoController(ILogger<HomeController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _context = context;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -39,6 +43,18 @@ namespace PROYECTO_BICICLETAS.Controllers
             //listar
         
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            Producto objProduct = await _context.Productos.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
+        }
+
+        
+
 
 
         public IActionResult Registro()
