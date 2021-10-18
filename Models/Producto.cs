@@ -38,10 +38,19 @@ namespace PROYECTO_BICICLETAS.Models
         [Column("description")]
         public string Descripcion { get; set; }
 
-        [Required(ErrorMessage="Debe colocar la categoria")]
+
         [Display (Name="Categoria")]  
         [Column("categoria")]
         public string Categoria { get; set; }
+
+        
+        [Display (Name="Tipo")]  
+        [Column("tipo")]
+        public string Tipo { get; set; }
+
+        [Display (Name="Modelo")]  
+        [Column("modelo")]
+        public string Modelo { get; set; }
         
 
     }

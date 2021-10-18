@@ -35,28 +35,7 @@ namespace PROYECTO_BICICLETAS.Controllers
             //listar
         
         }
-        public IActionResult Catalogo()
-        {
-            //listar
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
-            //listar
-        
-        }
-
-        public async Task<IActionResult> Details(int? id)
-        {
-            Producto objProduct = await _context.Productos.FindAsync(id);
-            if(objProduct == null){
-                return NotFound();
-            }
-            return View(objProduct);
-        }
-
-        
-
-
-
+         
         public IActionResult Registro()
         {
             return View();

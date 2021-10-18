@@ -1,0 +1,61 @@
+
+@model IEnumerable<PROYECTO_BICICLETAS.Models.Proforma>
+
+
+@{
+    ViewData["Title"]="Index";
+}
+
+<br>
+<h1>Carrito de Compras</h1>
+<br>
+<br>
+
+
+
+<table class="table">
+    <thead class="thead-dark" align="center">
+        <tr>
+            <th>
+                Producto
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                Precio
+            </th>
+            
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody align="center">
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                S/. @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a  class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
