@@ -20,6 +20,9 @@
                 Producto
             </th>
             <th>
+                
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
@@ -37,6 +40,10 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Producto.Name)
+            </td>
+            <td>
+                 <img class="img-responsive" width="90" height="100" src="/img/@item.Producto.Image"
+                                        alt="@item.Producto.Image" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cantidad)
