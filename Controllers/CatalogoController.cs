@@ -32,16 +32,16 @@ namespace PROYECTO_BICICLETAS.Controllers
          public IActionResult Catalogo()
         {
             //listar
-            var listarProductos = _context.Productos.ToList();
+            var listarProductos = _context.Productos.Where(x=> x.Tipo == "bicicleta");
             return View(listarProductos);
-            //listar
+            //listar  .Where((x=> x.Categoria == "infantil"))
         
         }
 
         public IActionResult Catalogo2()
         {
             //listar
-            var listarProductos = _context.Productos.ToList();
+            var listarProductos = _context.Productos.Where(x=> x.Tipo == "accesorio");
             return View(listarProductos);
             //listar
         
@@ -50,7 +50,7 @@ namespace PROYECTO_BICICLETAS.Controllers
         public IActionResult Catalogo3()
         {
             //listar
-            var listarProductos = _context.Productos.ToList();
+            var listarProductos = _context.Productos.Where(x=> x.Tipo == "indumentaria");
             return View(listarProductos);
             //listar
         
