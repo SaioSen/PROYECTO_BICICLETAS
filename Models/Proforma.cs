@@ -21,6 +21,8 @@ namespace PROYECTO_BICICLETAS.Models
 
         public Decimal Price { get; set; }
 
+        public string Image{ get; set; }
+
 
         
     }
