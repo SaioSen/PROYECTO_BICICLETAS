@@ -95,6 +95,7 @@ namespace PROYECTO_BICICLETAS.Controllers
                 Proforma proforma = new Proforma();
                 proforma.Producto = producto;
                 proforma.Price = producto.Price;
+                proforma.Image = producto.Image;
                 proforma.Cantidad = 1;
                 proforma.UserID = userID;
                 _context.Add(proforma);
