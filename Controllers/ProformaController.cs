@@ -33,7 +33,14 @@ namespace PROYECTO_BICICLETAS.Controllers
                 Include(p => p.Producto).
                 Where(s => s.UserID.Equals(userID));
 
-            return View(await items.ToListAsync());
+            var elements = await items.ToListAsync();
+            var total = elements.Sum(c => c.Cantidad * c.Price );
+            
+            dynamic model = new ExpandoObject();
+            model.montoTotal = total;
+            model.proformas = elements;
+
+            return View(model);
 
 
         }

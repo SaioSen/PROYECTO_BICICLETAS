@@ -15,6 +15,7 @@ namespace PROYECTO_BICICLETAS.Data
         public DbSet<PROYECTO_BICICLETAS.Models.Producto> Productos {get;set;}
 
         public DbSet<PROYECTO_BICICLETAS.Models.Proforma> Proformas {get;set;}
+        public DbSet<PROYECTO_BICICLETAS.Models.Pago> Pago {get;set;}
 
         
 

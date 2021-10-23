@@ -1,16 +1,21 @@
-
-@model IEnumerable<PROYECTO_BICICLETAS.Models.Proforma>
-
+@model dynamic;
+@using System.Collections.Generic;
 
 @{
-    ViewData["Title"]="Index";
+    ViewData["Title"]="Carrito";
+    IEnumerable<PROYECTO_BICICLETAS.Models.Proforma> listProformas = new List<Proforma>();
+    listProformas = @Model.proformas;
+    Decimal montoTotal = @Model.montoTotal;
 }
 
 <br>
 <h1>Carrito de Compras</h1>
 <br>
 <br>
-
+<a class="btn btn-primary" asp-controller="Pago" 
+        asp-action="Create" asp-route-id="@montoTotal">Pagar</a><p>Total S/. @montoTotal</p>
+<br>
+<br>
 
 
 <table class="table">
@@ -23,7 +28,7 @@
                 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cantidad)
+                @Html.DisplayNameFor(model => listProformas.FirstOrDefault().Cantidad)
             </th>
             <th>
                 Precio
@@ -36,7 +41,7 @@
     </thead>
     <tbody align="center">
 
-@foreach (var item in Model) {
+@foreach (Proforma item in Model.proformas) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Producto.Name)
