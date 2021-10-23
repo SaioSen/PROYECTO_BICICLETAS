@@ -23,12 +23,12 @@
         <div class="card mb-3">
           <div class="card-body">
             <div class="card-img-actions" align="center">
-              <img class="img-responsive" width="190" height="200" src="/img/@item.Image"
-                  alt="@item.Image" />
+              <a asp-action="Details" asp-route-id="@item.Id"><img class="img-responsive" width="190" height="200" src="/img/@item.Image"
+                  alt="@item.Image" /></a>
             </div>
           </div>
           <div class="card-body co fo" >
-            <h5 class="card-title g900 " >@Html.DisplayFor(modelItem => item.Name)</h5>
+            <a asp-action="Details" asp-route-id="@item.Id"><h5 class="card-title g900 " >@Html.DisplayFor(modelItem => item.Name)</h5></a>
               <p class="card-text " >Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
               <p class="card-text">Categoria: @Html.DisplayFor(modelItem => item.Categoria)</p>
               <p class="card-text"> Stock: @Html.DisplayFor(modelItem => item.Amout) unidades</p> 
