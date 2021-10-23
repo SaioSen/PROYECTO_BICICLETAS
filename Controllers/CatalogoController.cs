@@ -100,9 +100,11 @@ namespace PROYECTO_BICICLETAS.Controllers
                 proforma.UserID = userID;
                 _context.Add(proforma);
                 await _context.SaveChangesAsync();
-                return  RedirectToAction(nameof(Index));
+                return  View("Registrado");;
             }
         }
+
+         
 
 
 
