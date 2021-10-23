@@ -13,21 +13,6 @@
     <h1>Carrito de Compras</h1>
     <br>
     <br>
-
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-9">
-                <h3>Total a pagar : S/. @montoTotal</h3>
-            </div>
-            <div class="col-md-3 align-center">
-                <a class="btn btn-success btn-lg btn-block" asp-controller="Pago" asp-action="Create"
-                    asp-route-id="@montoTotal">Pagar</a>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
     <table class="table">
         <thead class="thead-dark" align="center">
             <tr>
@@ -75,6 +60,17 @@
         </tbody>
     </table>
     <br>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-9">
+                <h3>Total a pagar : S/. @montoTotal</h3>
+            </div>
+            <div class="col-md-3 align-center">
+                <a class="btn btn-success btn-lg btn-block" asp-controller="Pago" asp-action="Create"
+                    asp-route-id="@montoTotal">Pagar</a>
+            </div>
+        </div>
+    </div>
     <br>
     <br>
     <br>
