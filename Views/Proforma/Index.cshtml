@@ -2,73 +2,83 @@
 @using System.Collections.Generic;
 
 @{
-    ViewData["Title"]="Carrito";
+    ViewData["Title"] = "Carrito";
     IEnumerable<PROYECTO_BICICLETAS.Models.Proforma> listProformas = new List<Proforma>();
     listProformas = @Model.proformas;
     Decimal montoTotal = @Model.montoTotal;
 }
+
 <body class="back">
-<br>
-<h1>Carrito de Compras</h1>
-<br>
-<br>
-<a class="btn btn-primary" asp-controller="Pago" 
-        asp-action="Create" asp-route-id="@montoTotal">Pagar</a><p>Total S/. @montoTotal</p>
-<br>
-<br>
+    <br>
+    <h1>Carrito de Compras</h1>
+    <br>
+    <br>
 
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-9">
+                <h3>Total a pagar : S/. @montoTotal</h3>
+            </div>
+            <div class="col-md-3 align-center">
+                <a class="btn btn-success btn-lg btn-block" asp-controller="Pago" asp-action="Create"
+                    asp-route-id="@montoTotal">Pagar</a>
+            </div>
+        </div>
+    </div>
 
-<table class="table">
-    <thead class="thead-dark" align="center">
-        <tr>
-            <th>
-                Producto
-            </th>
-            <th>
-                
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => listProformas.FirstOrDefault().Cantidad)
-            </th>
-            <th>
-                Precio
-            </th>
-            
-            <th>
-                Acciones
-            </th>
-        </tr>
-    </thead>
-    <tbody align="center">
+    <br>
 
-@foreach (Proforma item in Model.proformas) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Producto.Name)
-            </td>
-            <td>
-                 <img class="img-responsive" width="90" height="100" src="/img/@item.Image"
-                                        alt="@item.Image" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cantidad)
-            </td>
-            <td>
-                S/. @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a  class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <table class="table">
+        <thead class="thead-dark" align="center">
+            <tr>
+                <th>
+                    Producto
+                </th>
+                <th>
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => listProformas.FirstOrDefault().Cantidad)
+                </th>
+                <th>
+                    Precio
+                </th>
+
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody align="center" class="text-white">
+
+            @foreach (Proforma item in Model.proformas)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Producto.Name)
+                    </td>
+                    <td>
+                        <img class="img-responsive" width="90" height="100" src="/img/@item.Image" alt="@item.Image" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cantidad)
+                    </td>
+                    <td>
+                        S/. @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
