@@ -13,33 +13,33 @@
   </ol>
 </nav>
 <br>
-
-<div class="container">
-  <div class="row">
-    @foreach (var item in Model)
-   { 
+<body class="back">
+  <div class="container">
+    <div class="row">
+      @foreach (var item in Model)
+    { 
     
     <div class="col-sm-4">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="card-img-actions" align="center">
-                                        <img class="img-responsive" width="190" height="200" src="/img/@item.Image"
-                                        alt="@item.Image" />
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                                    <p class="card-text"> Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
-                                    <p class="card-text"> Stock: @Html.DisplayFor(modelItem => item.Amout)</p> 
-                                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
-                                    <a class="btn btn-info" asp-action="Details2" asp-route-id="@item.Id">Detalle</a>
-                                </div>
-                            </div>
-                        </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="card-img-actions" align="center">
+            <img class="img-responsive" width="190" height="200" src="/img/@item.Image"
+              alt="@item.Image" />
+          </div>
+        </div>
+        <div class="card-body co">
+          <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+          <p class="card-text"> Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
+          <p class="card-text"> Stock: @Html.DisplayFor(modelItem => item.Amout)</p> 
+          <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
+          <a class="btn btn-info" asp-action="Details2" asp-route-id="@item.Id">Detalle</a>
+        </div>
+      </div>
+    </div>
 
    
-    }
+  }
  
-</div>
-
+  </div>
+</body>
     
