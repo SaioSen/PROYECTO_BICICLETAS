@@ -3,51 +3,52 @@
 @{
     ViewData["Title"] = "Detalle";
 }
-
-<h1>Detalle</h1>
-<nav aria-label="breadcrumb">
-  <ol class="nav">
-    <li class="breadcrumb-item"><a href="/Home/Index">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="/Catalogo/Catalogo">Catálogo</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Detalle</li>
-  </ol>
-</nav>
-    <div class="container">
-      <div class="row">
-            <div class="col-md-6">
-              
-                  <div class="card-img-actions" align="center">
-                    <img class="img-responsive" width="590" height="600"
-                       src="/img/@Html.DisplayFor(model => model.Image)" alt="@Html.DisplayFor(model => model.Image)"  />
-                  </div>
-            </div>
-            <div class="col-md-6" align="left">
-                <div class="card-body">
-                  <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
-                  <br>
-                  <p>Sea el primero en dejar una reseña para este artículo</p>
-                  <h5 class="card-title">Precio: S/. @Html.DisplayFor(model => model.Price)</h5>
-              
-             
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Añadir al Carrito</a>
-                  <br>
-                  <br>
-
-
-                  <img src="/img/img0.png">
-                 </div>
-               </div>  
-            </div>
-
-            <div class="col-md-6">
-              <br>
-              <br>
-             <h4>Caraterísticas</h4>
-                  <p class="card-text"> @Html.DisplayFor(model => model.Descripcion)</p>
-            </div>
-            <br>
-            <br>
-            <br>
-      </div>
+<body class="back">
+  <h1>Detalle</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="nav">
+      <li class="breadcrumb-item"><a href="/Home/Index">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="/Catalogo/Catalogo">Catálogo</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Detalle</li>
+    </ol>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
             
+        <div class="card-img-actions" align="center">
+          <img class="img-responsive" width="490" height="500"
+            src="/img/@Html.DisplayFor(model => model.Image)" alt="@Html.DisplayFor(model => model.Image)"  />
+        </div>
+      </div>
+      <div class="col-md-6" align="left">
+        <div class="card-body">
+          <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
+          <br>
+          <p>Sea el primero en dejar una reseña para este artículo</p>
+          <h5 class="card-title">Precio: S/. @Html.DisplayFor(model => model.Price)</h5>
+             
+ 
+          <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Añadir al Carrito</a>
+          <br>
+          <br>
+
+
+          <img src="/img/img0.png">
+        </div>
+      </div>  
     </div>
+
+    <div class="col-md-6">
+      <br>
+      <br>
+      <h4>Caraterísticas</h4>
+      <p class="card-text"> @Html.DisplayFor(model => model.Descripcion)</p>
+    </div>
+      <br>
+      <br>
+      <br>
+  </div>
+            
+  </div>
+</body>

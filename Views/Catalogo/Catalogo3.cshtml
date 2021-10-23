@@ -27,12 +27,12 @@
               alt="@item.Image" />
           </div>
         </div>
-        <div class="card-body co">
-          <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+        <div class="card-body co fo">
+          <h5 class="card-title g900">@Html.DisplayFor(modelItem => item.Name)</h5>
           <p class="card-text"> Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
           <p class="card-text"> Stock:@Html.DisplayFor(modelItem => item.Amout)</p> 
-          <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
-          <a class="btn btn-info" asp-action="Details3" asp-route-id="@item.Id">Detalle</a>
+          <a class="btn btn-primary " asp-action="Add" asp-route-id="@item.Id" ><strong>Añadir</strong></a>
+              <a class="btn btn-info" asp-action="Details3" asp-route-id="@item.Id"><strong>Detalle</strong></a>
         </div>
       </div>
     </div>
