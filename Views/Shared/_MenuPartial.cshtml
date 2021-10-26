@@ -3,26 +3,32 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+
 @if (SignInManager.IsSignedIn(User))
 {
-    
-     <li class="option">
-        <a asp-area="" asp-controller="Producto" asp-action="Index" >Productos registrados</a>
-    </li>
-    <br>
-     <li class="option">
-        <a  asp-area="" asp-controller="Producto" asp-action="Registro" >Agregar Producto</a>
-    </li>
-    <br>
-     <li class="option">
-        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Perfil</a>
-    </li>
-
-    
-  
-}
-else
-{
+   
+    @if(User.IsInRole("Administradores") ){
+      
+        <li class="option">
+            <a asp-area="" asp-controller="Producto" asp-action="Index" >Productos registrados</a>
+        </li>
+        <br>
+        <li class="option">
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Perfil</a>
+        </li>
+    }else if(User.IsInRole("OperadoresVentas")){
+        <li class="option">
+            <a asp-area="" asp-controller="Producto" asp-action="Index" >Productos registrados</a>
+        </li>
+        <br>
+        <li class="option">
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Perfil</a>
+        </li>
+    }else
+    {
+         
+    }
+}else{
     <li class="option">
         <a  asp-area="" asp-controller="Contacto" asp-action="Index" >Contactenos</a>
     </li>
@@ -32,3 +38,4 @@ else
    
 }
 </ul>
+
