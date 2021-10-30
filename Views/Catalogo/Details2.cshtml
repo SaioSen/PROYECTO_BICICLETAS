@@ -1,25 +1,26 @@
 @model PROYECTO_BICICLETAS.Models.Producto
 
 @{
-    ViewData["Title"] = "Detalle";
+  ViewData["Title"] = "Detalle";
 }
+
 <body class="back">
-<h1>Detalle</h1>
-<nav aria-label="breadcrumb">
-  <ol class="nav">
-    <li class="breadcrumb-item"><a href="/Home/Index">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="/Catalogo/Catalogo2">Catálogo</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Detalle</li>
-  </ol>
-</nav>
-<br>
+  <h1>Detalle</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="nav">
+      <li class="breadcrumb-item"><a href="/Home/Index">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="/Catalogo/Catalogo2">Catálogo</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Detalle</li>
+    </ol>
+  </nav>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-              
+
         <div class="card-img-actions" align="center">
-          <img class="img-responsive" width="490" height="500"
-            src="/img/@Html.DisplayFor(model => model.Image)" alt="@Html.DisplayFor(model => model.Image)"  />
+          <img class="img-responsive" width="490" height="500" src="/img/@Html.DisplayFor(model => model.Image)"
+            alt="@Html.DisplayFor(model => model.Image)" />
         </div>
       </div>
       <div class="col-md-6" align="left">
@@ -28,8 +29,8 @@
           <br>
           <p>Sea el primero en dejar una reseña para este artículo</p>
           <h5 class="card-title">Precio: S/. @Html.DisplayFor(model => model.Price)</h5>
-              
-             
+
+
           <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir al Carrito</a>
           <br>
           <br>
@@ -37,7 +38,7 @@
 
           <img src="/img/img0.png">
         </div>
-      </div>  
+      </div>
     </div>
 
     <div class="col-md-6">
@@ -46,10 +47,10 @@
       <h4>Caraterísticas</h4>
       <p class="card-text"> @Html.DisplayFor(model => model.Descripcion)</p>
     </div>
-       <br>
-       <br>
-       <br>
-    </div>
-            
+    <br>
+    <br>
+    <br>
+  </div>
+
   </div>
 </body>
