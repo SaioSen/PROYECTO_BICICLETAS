@@ -13,21 +13,21 @@ a {
 }
 
 .back {
-  background-color:#384656;
+  background-color: #384656;
   color: #fff;
 }
 
 .back2 {
-  background-color:#b2d320;
+  background-color: #b2d320;
   color: #fff;
 }
 
-.co{
+.co {
   color: rgb(0, 0, 0);
 }
 
-.fo{
-  background-color:#f3974b
+.fo {
+  background-color: #f3974b;
 }
 
 .btn-primary {
@@ -36,14 +36,20 @@ a {
   border-color: #1861ac;
 }
 
-.g900 { font-weight: 700; }
+.g900 {
+  font-weight: 700;
+}
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+.ta {
+  font-size: large;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -63,7 +69,7 @@ html {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy {
@@ -83,9 +89,7 @@ body {
   margin: 0em auto 0em;
 }
 
-
-
-footer{
+footer {
   position: relative;
   bottom: 0;
   left: 0;
@@ -94,48 +98,47 @@ footer{
   align-items: center;
   height: auto;
   width: 100vw;
-  font-family:"Open Sans";
+  font-family: "Open Sans";
   padding-top: 40px;
-  color: #FFFFFF;
-} 
+  color: #ffffff;
+}
 
-.footer-content{
+.footer-content {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
-.footer-content h4{
+.footer-content h4 {
   font-size: 1.8rem;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 3rem;
 }
 
-.redes{
+.redes {
   list-style: none;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 1rem 0 3rem 0;
 }
-.redes li{
-  margin: 0 10 px;  
+.redes li {
+  margin: 0 10 px;
 }
-.redes a{
-  text-decoration:none ;
-  color: #FFFFFF;
+.redes a {
+  text-decoration: none;
+  color: #ffffff;
 }
-.redes a i{
+.redes a i {
   font-size: 3.1rem;
-  transition: color .4s ease;
+  transition: color 0.4s ease;
 }
-.redes  a:hover  i{
-  color:#F8C817;
+.redes a:hover i {
+  color: #f8c817;
 }
 
-.b{
-  
-  margin:50px ;
+.b {
+  margin: 50px;
 }
