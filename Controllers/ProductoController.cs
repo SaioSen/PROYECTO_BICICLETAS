@@ -32,6 +32,15 @@ namespace PROYECTO_BICICLETAS.Controllers
             //listar
         
         }
+
+        public IActionResult Bicicleta()
+        {
+            //listar
+            var listarProductos = _context.Productos.ToList();
+            return View(listarProductos);
+            //listar
+        
+        }
          
         public IActionResult Registro()
         {
@@ -78,7 +87,7 @@ namespace PROYECTO_BICICLETAS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Descripcion,Categoria")] Producto objProducto ){
+        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price,Amout,Descripcion,Categoria,Tipo,Modelo")] Producto objProducto ){
 
             if(id !=objProducto.Id){
                 return NotFound();

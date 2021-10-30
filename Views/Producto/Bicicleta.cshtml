@@ -3,27 +3,30 @@
 @{
   ViewData["Title"] = "Catalogo de Productos";
 }
-<h1 style="text-align:center;">Catalogo de Productos</h1>
+<h1 style="text-align:center;">Registro de Productos</h1>
 
-<table class="table table-hover" style="text-align: center;">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
-      <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
-      <th scope="col">@Html.DisplayNameFor(model => model.Price)</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="container">
+   <br> <br> 
 
-    @foreach (var item in Model)
-    {
+<div align="center">
 
-      <tr>
-        <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th>
-        <td> <img src="@item.Image" alt="" width="400px" height="400px"></td>
-        <td>S/.@Html.DisplayFor(modelItem => item.Price)</td>
-      </tr>
+ <br>
+  <br>
+   <br>
+    <br>
 
-    }
-  </tbody>
-</table>
+    <a class="btn btn-primary btn-lg btn-block"" href="/Producto/Registro" role="button">Registrar Productos</a>
+ <br>
+<a class="btn btn-danger btn-lg btn-block"" href="/Producto/Index" role="button">Listar Productos</a>
+  <br>
+   <br> <br>
+    <br>
+
+</div>
+
+ <br> <br> <br> <br>
+
+
+
+
+</div>
