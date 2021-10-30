@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
+
 </head>
 
 
@@ -19,40 +19,47 @@
         <nav class="  navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3 ">
             <div class="container ">
                 <a class="navbar-brand" href><img
-                src="https://static.vecteezy.com/system/resources/previews/001/192/394/non_2x/olympic-bike-race-png.png"
-                alt="" width="80" height="80"></a>
+                        src="https://static.vecteezy.com/system/resources/previews/001/192/394/non_2x/olympic-bike-race-png.png"
+                        alt="" width="80" height="80"></a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> ZONABICI</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
-                   
+
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>Home</strong></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Index"><strong>Home</strong></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo" asp-action="Catalogo"><strong>Bicicletas</strong></a>
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo"><strong>Bicicletas</strong></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo" asp-action="Catalogo2"><strong>Accesorios</strong></a>
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo2"><strong>Accesorios</strong></a>
                         </li>
-                         <li class="nav-item ">
-                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo" asp-action="Catalogo3"><strong>Indumentaria</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs"> <strong>About Us</strong> </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto"> <strong>Contacto</strong></a>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo3"><strong>Indumentaria</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index"> <strong>Carrito</strong></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">
+                                <strong>About Us</strong> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">
+                                <strong>Contacto</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index">
+                                <strong>Carrito</strong></a>
                         </li>
                         <partial name="_LoginPartial" />
                     </ul>
-                    
+
                 </div>
             </div>
         </nav>
@@ -63,87 +70,91 @@
         </main>
     </div>
 
-   <br>
+    <br>
     <footer>
-    <div class="container,footer-content">
-      <div class="row">
-                    <div class="col-md-4" >
-                        <div class="b">
+        <div class="container,footer-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="b">
                         <h1> <b>ZONA BICI</b> </h1>
+                        <a class="navbar-brand" href><img class="container" src="~/img/rueda.png" alt="" width="100"
+                                height="100"></a>
                         <a class="navbar-brand" href><img class="container"
-                src="~/img/rueda.png"
-                alt="" width="100" height="100"></a>
-                 <a class="navbar-brand" href><img class="container"
-                src="https://www.eltallerdebicicletas.cl/images/Logo-El-Taller_1.png"
-                alt="" width="100" height="100"></a>
-               
-                    <p>No importa donde estés, siempre vamos a engreirte con el producto que necesites. ¡Gracias por preferirnos!</p>
-                    </div>
-                    </div>
-                   
-                    <div class="col-md-4" >
-                         <h4>CONTÁCTANOS</h4>
-                            <div class="b">
-                            <b>Email</b>
-                            <br>
-                            ventas@zonabici.com.pe
-                            <br>
-                            <b> Whatsapp</b><br>
-                            (+51) 980 124 123
-                            <br>
-                            <b>Horario de atención</b> <br>
-                            Lunes a Viernes de  10:00 A.M. a 7:00 P.M.
-                            Sábados y domingos de 10:00 A.M. a 6:00 P.M.
-                            <br>
-                            <b>Dirección Oficina Central</b> <br>
-                            Av. la Molina 1167, La Molina 15024,Lima,Perú.
-                            </div>
-                    </div>
-                  <div class="col-md-4" >
-                         <h4>SOBRE NOSOTROS</h4>
-                            <div class="b">
-                            <a asp-controller="Home" asp-action="Index">Home</a>
-                            <br>
-                            <a asp-controller="Home" asp-action="About Us">Nosotros</a> 
-                            <br>
-                            <a asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
-                            <br>
-                             <a asp-controller="Producto" asp-action="Catalogo">Catálogo</a>
-                             <br>
-                            <ul class="redes">
-                            <li><a href="https://www.facebook.com/" >  <i class="fa fa-facebook" width="100" height="100"></i></i></a></li>
-                            <li><a href="https://twitter.com/home"  > <i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.google.com/intl/es-419/gmail/about/"  > <i class="fa fa-google-plus"></i></a></li>
-                           </ul>
-                    </div>
-                    
+                                src="https://www.eltallerdebicicletas.cl/images/Logo-El-Taller_1.png" alt="" width="100"
+                                height="100"></a>
 
-        </div>            
-    </div>
-  
-</footer>
+                        <p>No importa donde estés, siempre vamos a engreirte con el producto que necesites. ¡Gracias por
+                            preferirnos!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>CONTÁCTANOS</h4>
+                    <div class="b">
+                        <b>Email</b>
+                        <br>
+                        ventas@zonabici.com.pe
+                        <br>
+                        <b> Whatsapp</b><br>
+                        (+51) 980 124 123
+                        <br>
+                        <b>Horario de atención</b> <br>
+                        Lunes a Viernes de 10:00 A.M. a 7:00 P.M.
+                        Sábados y domingos de 10:00 A.M. a 6:00 P.M.
+                        <br>
+                        <b>Dirección Oficina Central</b> <br>
+                        Av. la Molina 1167, La Molina 15024,Lima,Perú.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>SOBRE NOSOTROS</h4>
+                    <div class="b">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                        <br>
+                        <a asp-controller="Home" asp-action="About Us">Nosotros</a>
+                        <br>
+                        <a asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
+                        <br>
+                        <a asp-controller="Producto" asp-action="Catalogo">Catálogo</a>
+                        <br>
+                        <ul class="redes">
+                            <li><a href="https://www.facebook.com/"> <i class="fa fa-facebook" width="100"
+                                        height="100"></i></i></a></li>
+                            <li><a href="https://twitter.com/home"> <i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.google.com/intl/es-419/gmail/about/"> <i
+                                        class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7-beta.23/jquery.inputmask.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>    
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7-beta.23/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 
-      <script>
+    <script>
         $('.input-group.date').datepicker({
-          autoclose: true,
-          todayHighlight: true
+            autoclose: true,
+            todayHighlight: true
         });
-      </script>
-      <script>
+    </script>
+    <script>
         $(":input").inputmask();
-      </script>
-      <script>
-        $(function() {
-          $('#currency').maskMoney();
+    </script>
+    <script>
+        $(function () {
+            $('#currency').maskMoney();
         })
-      </script>
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

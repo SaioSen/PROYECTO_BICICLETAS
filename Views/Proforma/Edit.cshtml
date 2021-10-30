@@ -15,7 +15,7 @@
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="UserID" />
             <input type="hidden" asp-for="Price" />
-            <input type="hidden" asp-for="Image"/>
+            <input type="hidden" asp-for="Image" />
             <div class="form-group">
                 <label asp-for="Cantidad" class="control-label"></label>
                 <input asp-for="Cantidad" class="form-control" />
@@ -33,5 +33,5 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

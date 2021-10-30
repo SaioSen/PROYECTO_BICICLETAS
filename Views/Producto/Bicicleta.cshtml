@@ -1,7 +1,7 @@
 @model IEnumerable<PROYECTO_BICICLETAS.Models.Producto>
 
 @{
-    ViewData["Title"] = "Catalogo de Productos";
+  ViewData["Title"] = "Catalogo de Productos";
 }
 <h1 style="text-align:center;">Catalogo de Productos</h1>
 
@@ -15,15 +15,15 @@
   </thead>
   <tbody>
 
-   @foreach (var item in Model)
-   {
+    @foreach (var item in Model)
+    {
 
-    <tr>
-      <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th> 
-      <td> <img src="@item.Image" alt="" width="400px" height="400px"></td>
-      <td>S/.@Html.DisplayFor(modelItem => item.Price)</td>
-    </tr>
+      <tr>
+        <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th>
+        <td> <img src="@item.Image" alt="" width="400px" height="400px"></td>
+        <td>S/.@Html.DisplayFor(modelItem => item.Price)</td>
+      </tr>
 
-   }
+    }
   </tbody>
 </table>
