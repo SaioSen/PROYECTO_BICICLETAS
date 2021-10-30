@@ -1,5 +1,3 @@
-using System;
-
 namespace PROYECTO_BICICLETAS.Models
 {
     public class ErrorViewModel
