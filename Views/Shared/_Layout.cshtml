@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head class="">
@@ -28,7 +30,62 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
 
+
+
+    @if(User.IsInRole("Administradores") ){
+      
+       
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Index"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo"><strong>Bicicletas</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo2"><strong>Accesorios</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo3"><strong>Indumentaria</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Index">
+                                <strong>Lista de Productos</strong></a>
+                        </li>
+                       
+                        <partial name="_LoginPartial" />
+                    </ul>
+    }else if(User.IsInRole("OperadoresVentas")){
+      
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Index"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo"><strong>Bicicletas</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo2"><strong>Accesorios</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Catalogo"
+                                asp-action="Catalogo3"><strong>Indumentaria</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Registro">
+                                <strong>Agregar Productos</strong></a>
+                        </li>
+                        <partial name="_LoginPartial" />
+                    </ul>
+    }else{
+        <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home"
                                 asp-action="Index"><strong>Home</strong></a>
@@ -55,17 +112,21 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Bicicleta">
-                                <strong>Registro Productos</strong></a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index">
                                 <strong>Carrito</strong></a>
                         </li>
                         <partial name="_LoginPartial" />
                     </ul>
 
+    }
+
+    
+
+
+
+
+
+                   
                 </div>
             </div>
         </nav>

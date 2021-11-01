@@ -35,8 +35,15 @@
               <p class="card-text ">Precio: S/.@Html.DisplayFor(modelItem => item.Price)</p>
               <p class="card-text">Categoria: @Html.DisplayFor(modelItem => item.Categoria)</p>
               <p class="card-text"> Stock: @Html.DisplayFor(modelItem => item.Amout) unidades</p>
-              <a class="btn btn-primary " asp-action="Add" asp-route-id="@item.Id"><strong>Añadir</strong></a>
+
+            @if(User.IsInRole("Administradores" )){               
+              <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><strong>Detalles</strong></a>       
+               }else if(User.IsInRole("OperadoresVentas" )){              
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><strong>Detalles</strong></a>
+              }else{           
+              <a class="btn btn-primary " asp-action="Add" asp-route-id="@item.Id"><strong>Añadir</strong></a>           
               <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><strong>Detalle</strong></a>
+              }
             </div>
           </div>
         </div>
@@ -46,3 +53,5 @@
 
     </div>
 </body>
+
+

@@ -29,9 +29,14 @@
           <br>
           <p>Sea el primero en dejar una reseña para este artículo</p>
           <h5 class="card-title">Precio: S/. @Html.DisplayFor(model => model.Price)</h5>
+            @if(User.IsInRole("Administradores" )){      
+               <a class="btn btn-primary"  asp-controller="Producto" asp-action="Index">Modificar</a>
+               }else if(User.IsInRole("OperadoresVentas" )){
+                <a class="btn btn-primary"  asp-controller="Producto" asp-action="Index">Modificar</a>
+              }else{           
+               <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir al Carrito</a>
+              }      
 
-
-          <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir al Carrito</a>
           <br>
           <br>
 
